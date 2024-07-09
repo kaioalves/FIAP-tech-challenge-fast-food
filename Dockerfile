@@ -21,7 +21,7 @@ COPY --from=build /app/target/fastfood-0.0.1-SNAPSHOT.jar /app/app.jar
 WORKDIR /app
 
 # Expõe a porta 8080 para o contêiner
-EXPOSE 8082
+EXPOSE 8080
 
 # Comando para executar a aplicação
 CMD ["java", "-jar", "app.jar"]
