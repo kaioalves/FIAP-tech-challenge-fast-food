@@ -1,4 +1,4 @@
-package com.fiap.techchallenge.fastfood.adapter.driven.infra;
+package com.fiap.techchallenge.fastfood.adapter.driven.infra.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

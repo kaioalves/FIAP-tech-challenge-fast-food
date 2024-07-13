@@ -1,5 +1,8 @@
-package com.fiap.techchallenge.fastfood.adapter.driven.infra;
+package com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.jpa;
 
+import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.CategoryEntity;
+import com.fiap.techchallenge.fastfood.adapter.driven.infra.mappers.CategoryMapper;
+import com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.CategoryRepository;
 import com.fiap.techchallenge.fastfood.core.applications.ports.CategoryRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
 
