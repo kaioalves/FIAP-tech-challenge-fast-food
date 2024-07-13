@@ -1,4 +1,4 @@
 package com.fiap.techchallenge.fastfood.domain;
 
-public interface Category {
+public interface CategoryService {
 }
