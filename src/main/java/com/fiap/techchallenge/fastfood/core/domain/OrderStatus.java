@@ -1,4 +1,4 @@
-package com.fiap.techchallenge.fastfood.domain;
+package com.fiap.techchallenge.fastfood.core.domain;
 
 public enum OrderStatus {
     WAITING_PAYMENT,

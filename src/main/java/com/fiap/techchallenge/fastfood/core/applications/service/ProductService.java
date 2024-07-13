@@ -1,7 +1,7 @@
-package com.fiap.techchallenge.fastfood.service;
+package com.fiap.techchallenge.fastfood.core.applications.service;
 
-import com.fiap.techchallenge.fastfood.domain.Category;
-import com.fiap.techchallenge.fastfood.domain.Product;
+import com.fiap.techchallenge.fastfood.core.domain.Category;
+import com.fiap.techchallenge.fastfood.core.domain.Product;
 
 import java.util.List;
 

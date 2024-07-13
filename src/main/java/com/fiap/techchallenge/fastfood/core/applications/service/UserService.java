@@ -1,6 +1,6 @@
-package com.fiap.techchallenge.fastfood.service;
+package com.fiap.techchallenge.fastfood.core.applications.service;
 
-import com.fiap.techchallenge.fastfood.domain.User;
+import com.fiap.techchallenge.fastfood.core.domain.User;
 
 import java.util.List;
 
