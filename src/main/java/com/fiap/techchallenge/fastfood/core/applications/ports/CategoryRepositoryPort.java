@@ -13,5 +13,4 @@ public interface CategoryRepositoryPort {
    Category getCategoryById(Long id);
 
    List<Category> getAllCategories();
-
 }
