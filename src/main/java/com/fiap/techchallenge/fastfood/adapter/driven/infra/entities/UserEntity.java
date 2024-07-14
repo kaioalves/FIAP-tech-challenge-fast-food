@@ -3,6 +3,8 @@ package com.fiap.techchallenge.fastfood.adapter.driven.infra.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.*;
@@ -30,5 +32,7 @@ public class UserEntity implements Serializable {
     private String cpf;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 }
