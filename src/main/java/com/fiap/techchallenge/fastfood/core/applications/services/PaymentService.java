@@ -1,4 +1,4 @@
-package com.fiap.techchallenge.fastfood.core.applications.service;
+package com.fiap.techchallenge.fastfood.core.applications.services;
 
 import com.fiap.techchallenge.fastfood.core.domain.Order;
 
