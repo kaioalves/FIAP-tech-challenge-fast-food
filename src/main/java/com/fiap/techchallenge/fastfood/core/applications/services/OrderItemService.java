@@ -1,14 +1,25 @@
 package com.fiap.techchallenge.fastfood.core.applications.services;
 
-import com.fiap.techchallenge.fastfood.core.domain.Order;
-import com.fiap.techchallenge.fastfood.core.domain.OrderItem;
-import com.fiap.techchallenge.fastfood.core.domain.Product;
-
 import java.util.List;
 
-public interface OrderItemService {
+import com.fiap.techchallenge.fastfood.core.applications.ports.OrderItemRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.domain.OrderItem;
 
-    void register(Product product, Order order, Long price, int quantity);
+import lombok.AllArgsConstructor;
 
-    List<OrderItem> findByOrderId(Long orderId);
+@AllArgsConstructor
+public class OrderItemService {
+
+    private final OrderItemRepositoryPort orderItemRepositoryPort;
+
+    public void insertOrderItens(List<OrderItem> orderItens) {
+        for (OrderItem orderItem : orderItens) {
+            this.orderItemRepositoryPort.register(orderItem);
+        }
+    }
+
+    public List<OrderItem> getByOrderId(Long orderId) {
+        return this.orderItemRepositoryPort.findByOrderId(orderId);
+    }
+
 }
