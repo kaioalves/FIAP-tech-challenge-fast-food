@@ -1,20 +1,21 @@
-package com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.jpa;
+package com.fiap.techchallenge.fastfood.adapter.driven.infra;
 
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.CategoryEntity;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.mappers.CategoryMapper;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.CategoryRepository;
 import com.fiap.techchallenge.fastfood.core.applications.ports.CategoryRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+@Component
 public class CategoryJpaPort implements CategoryRepositoryPort {
 
+    @Autowired
     private CategoryRepository categoryRepository;
-
-    public CategoryJpaPort(CategoryRepository categoryRepository) {
-        this.categoryRepository = categoryRepository;
-    }
 
     @Override
     public void insertCategory(Category category) {
@@ -34,6 +35,8 @@ public class CategoryJpaPort implements CategoryRepositoryPort {
 
     @Override
     public List<Category> getAllCategories() {
-        return List.of();
+        return this.categoryRepository.findAll().stream()
+                .map(CategoryMapper::toDomain)
+                .collect(Collectors.toList());
     }
 }

@@ -2,31 +2,29 @@ package com.fiap.techchallenge.fastfood.core.applications.services;
 
 import com.fiap.techchallenge.fastfood.core.applications.ports.CategoryRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
+@AllArgsConstructor
 public class CategoryService {
 
-    private final CategoryRepositoryPort categoryRepository;
-
-    public CategoryService(CategoryRepositoryPort categoryRepository) {
-        this.categoryRepository = categoryRepository;
-    }
+    private final CategoryRepositoryPort categoryRepositoryPort;
 
     public void insertCategory(Category category) {
-        this.categoryRepository.insertCategory(category);
+        this.categoryRepositoryPort.insertCategory(category);
     }
 
     public void updateCategory(Long categoryId, Category category) {
-        this.categoryRepository.updateCategory(categoryId, category);
+        this.categoryRepositoryPort.updateCategory(categoryId, category);
     }
 
     public Category getCategoryById(Long id) {
-        return this.categoryRepository.getCategoryById(id);
+        return this.categoryRepositoryPort.getCategoryById(id);
     }
 
     public List<Category> getAllCategories() {
-        return this.categoryRepository.getAllCategories();
+        return this.categoryRepositoryPort.getAllCategories();
     }
 
 }

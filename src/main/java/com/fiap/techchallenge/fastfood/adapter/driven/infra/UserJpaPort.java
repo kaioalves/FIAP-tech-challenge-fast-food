@@ -1,4 +1,4 @@
-package com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.jpa;
+package com.fiap.techchallenge.fastfood.adapter.driven.infra;
 
 import java.util.List;
 import java.util.stream.Collectors;

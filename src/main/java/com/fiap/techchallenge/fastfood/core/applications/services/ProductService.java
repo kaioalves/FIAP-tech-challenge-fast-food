@@ -1,18 +1,33 @@
 package com.fiap.techchallenge.fastfood.core.applications.services;
 
+import com.fiap.techchallenge.fastfood.core.applications.ports.ProductRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
 import com.fiap.techchallenge.fastfood.core.domain.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-public interface ProductService {
+@Component
+public class ProductService {
 
-    void register(String name, String description, Category category, Double price);
+    @Autowired
+    private ProductRepositoryPort productRepositoryPort;
 
-    void update(String name, String description, Category category, Double price);
+    public void register(String name, String description, Category category, Double price) {
+        this.productRepositoryPort.register(name, description, category, price);
+    }
 
-    Product findById(Long id);
+    public void update(String name, String description, Category category, Double price) {
+        this.productRepositoryPort.update(name, description, category, price);
+    }
 
-    List<Product> findByCategoryId(Long categoryId);
+    public Product findById(Long id) {
+        return this.productRepositoryPort.findById(id);
+    }
+
+    public List<Product> findByCategoryId(Long categoryId) {
+        return this.productRepositoryPort.findByCategoryId(categoryId);
+    }
 
 }
