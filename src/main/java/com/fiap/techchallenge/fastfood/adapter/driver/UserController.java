@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.fiap.techchallenge.fastfood.core.applications.ports.UserRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.services.UserService;
 import com.fiap.techchallenge.fastfood.core.domain.User;
 
 @RestController
@@ -17,11 +17,11 @@ import com.fiap.techchallenge.fastfood.core.domain.User;
 public class UserController {
 
     @Autowired
-    private UserRepositoryPort userRepositoryPort;
+    private UserService userService;
 
     @PostMapping
     public ResponseEntity<User> register(@RequestBody User user) {
-        User createdUser = userRepositoryPort.register(user);
+        User createdUser = userService.register(user);
 
         /**
          * Forma adequada para retornar servços CREATED
@@ -34,19 +34,19 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
-        List<User> users = userRepositoryPort.findAll();
+        List<User> users = userService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(users);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
-        User user = userRepositoryPort.findById(id);
+        User user = userService.findById(id);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 
     @GetMapping("/email")
     public ResponseEntity<User> findByEmail(@RequestParam String email) {
-        User user = userRepositoryPort.findByEmail(email);
+        User user = userService.findByEmail(email);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 }

@@ -14,8 +14,9 @@ public class UserService {
     @Autowired
     private UserRepositoryPort userRepositoryPort;
 
-    public void register(String name, String email, String cpf) {
-        this.userRepositoryPort.register(new User(name, email, cpf, LocalDateTime.now()));
+    public User register(User user) {
+        return this.userRepositoryPort
+                .register(new User(user.getName(), user.getEmail(), user.getCpf(), LocalDateTime.now()));
     }
 
     public List<User> findAll() {
