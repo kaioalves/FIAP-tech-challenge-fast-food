@@ -2,7 +2,6 @@ package com.fiap.techchallenge.fastfood.adapter.driven.infra.entities;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import org.hibernate.annotations.CreationTimestamp;
 
