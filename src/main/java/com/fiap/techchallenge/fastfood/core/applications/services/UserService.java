@@ -1,16 +1,32 @@
 package com.fiap.techchallenge.fastfood.core.applications.services;
 
+import com.fiap.techchallenge.fastfood.core.applications.ports.UserRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
-public interface UserService {
+@Component
+public class UserService {
 
-    void register(String name, String email, String cpf);
+    @Autowired
+    private UserRepositoryPort userRepositoryPort;
 
-    List<User> findAll();
+    public void register(String name, String email, String cpf) {
+        this.userRepositoryPort.register(new User(name, email, cpf, LocalDateTime.now()));
+    }
 
-    User findById(String userId);
+    public List<User> findAll() {
+        return this.userRepositoryPort.findAll();
+    }
 
-    User findByEmail(String email);
+    public User findById(Long userId) {
+        return this.userRepositoryPort.findById(userId);
+    }
+
+    public User findByEmail(String email) {
+        return this.userRepositoryPort.findByEmail(email);
+    }
 }

@@ -1,6 +1,6 @@
 package com.fiap.techchallenge.fastfood.core.domain;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class User {
 
@@ -8,14 +8,17 @@ public class User {
     private String name;
     private String email;
     private String cpf;
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
-    public User(Long id, String name, String email, String cpf, Date createdAt) {
+    public User(Long id, String name, String email, String cpf, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.cpf = cpf;
         this.createdAt = createdAt;
+    }
+
+    public User(String name, String email, String cpf, LocalDateTime now) {
     }
 
     public Long getId() {
@@ -50,11 +53,11 @@ public class User {
         this.cpf = cpf;
     }
 
-    public Date getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 }
