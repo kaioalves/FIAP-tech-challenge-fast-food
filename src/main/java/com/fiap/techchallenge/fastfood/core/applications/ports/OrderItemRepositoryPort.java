@@ -6,7 +6,7 @@ import com.fiap.techchallenge.fastfood.core.domain.OrderItem;
 
 public interface OrderItemRepositoryPort {
 
-    OrderItem register(OrderItem orderItem);
+    void register(OrderItem orderItem);
 
     List<OrderItem> findByOrderId(Long orderId);
 
