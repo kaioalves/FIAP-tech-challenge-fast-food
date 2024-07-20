@@ -10,8 +10,8 @@ public class PaymentService {
 
     private final PaymentRepositoryPort paymentRepositoryPort;
 
-    public void insertPay(Payment payment) {
-        this.paymentRepositoryPort.register(payment);
+    public Payment registerPay(Payment payment) {
+        return  this.paymentRepositoryPort.registerPay(payment);
     }
 
 }
