@@ -1,6 +1,6 @@
 package com.fiap.techchallenge.fastfood.core.applications.services;
 
-import com.fiap.techchallenge.fastfood.core.applications.ports.ProductRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.ProductRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
 import com.fiap.techchallenge.fastfood.core.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;

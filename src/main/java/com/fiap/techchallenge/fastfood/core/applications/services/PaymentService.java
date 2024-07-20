@@ -1,9 +1,21 @@
 package com.fiap.techchallenge.fastfood.core.applications.services;
 
-import com.fiap.techchallenge.fastfood.core.domain.Order;
+import org.springframework.stereotype.Service;
 
-public interface PaymentService {
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.PaymentRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.services.PaymentServicePort;
+import com.fiap.techchallenge.fastfood.core.domain.Payment;
 
-    void pay(Order order);
+import lombok.AllArgsConstructor;
+
+@Service
+@AllArgsConstructor
+public class PaymentService implements PaymentServicePort{
+
+    private final PaymentRepositoryPort paymentRepositoryPort;
+
+    public Payment registerPay(Payment payment) {
+        return  this.paymentRepositoryPort.registerPay(payment);
+    }
 
 }

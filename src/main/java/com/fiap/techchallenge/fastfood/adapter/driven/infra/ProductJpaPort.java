@@ -4,7 +4,7 @@ import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.CategoryEnt
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.ProductEntity;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.mappers.ProductMapper;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.ProductRepository;
-import com.fiap.techchallenge.fastfood.core.applications.ports.ProductRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.ProductRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
 import com.fiap.techchallenge.fastfood.core.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;

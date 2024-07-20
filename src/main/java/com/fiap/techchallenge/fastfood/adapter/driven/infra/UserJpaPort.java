@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.UserEntity;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.mappers.UserMapper;
-import com.fiap.techchallenge.fastfood.core.applications.ports.UserRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.UserRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.User;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.UserRepository;
 
