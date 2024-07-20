@@ -3,6 +3,7 @@ package com.fiap.techchallenge.fastfood.adapter.driven.infra;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.OrderItemEntity;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.mappers.OrderItemMapper;
@@ -12,6 +13,7 @@ import com.fiap.techchallenge.fastfood.core.domain.OrderItem;
 
 import java.util.stream.Collectors;
 
+@Component
 public class OrderItemJpaPort implements OrderItemRepositoryPort{
 
     @Autowired
