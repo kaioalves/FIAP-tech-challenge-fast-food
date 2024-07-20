@@ -20,7 +20,7 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-        @PostMapping
+    @PostMapping
     public ResponseEntity<Payment> register(@RequestBody Payment payment) {
         Payment registredPayment = paymentService.registerPay(payment);
 

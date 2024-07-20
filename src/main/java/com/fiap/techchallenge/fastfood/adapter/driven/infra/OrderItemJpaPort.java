@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.entities.OrderItemEntity;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.mappers.OrderItemMapper;
 import com.fiap.techchallenge.fastfood.adapter.driven.infra.repositories.OrderItemRepository;
-import com.fiap.techchallenge.fastfood.core.applications.ports.OrderItemRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.OrderItemRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.OrderItem;
 
 import java.util.stream.Collectors;

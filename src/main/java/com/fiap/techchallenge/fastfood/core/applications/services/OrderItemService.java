@@ -2,7 +2,7 @@ package com.fiap.techchallenge.fastfood.core.applications.services;
 
 import java.util.List;
 
-import com.fiap.techchallenge.fastfood.core.applications.ports.OrderItemRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.OrderItemRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.OrderItem;
 
 import lombok.AllArgsConstructor;

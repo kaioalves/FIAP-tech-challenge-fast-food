@@ -1,4 +1,4 @@
-package com.fiap.techchallenge.fastfood.core.applications.ports;
+package com.fiap.techchallenge.fastfood.core.applications.ports.repository;
 
 import com.fiap.techchallenge.fastfood.core.domain.Payment;
 

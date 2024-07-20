@@ -1,6 +1,6 @@
 package com.fiap.techchallenge.fastfood.core.applications.services;
 
-import com.fiap.techchallenge.fastfood.core.applications.ports.CategoryRepositoryPort;
+import com.fiap.techchallenge.fastfood.core.applications.ports.repository.CategoryRepositoryPort;
 import com.fiap.techchallenge.fastfood.core.domain.Category;
 import lombok.AllArgsConstructor;
 
