@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.fiap.techchallenge.fastfood.core.applications.services.PaymentService;
+import com.fiap.techchallenge.fastfood.core.applications.ports.services.PaymentServicePort;
 import com.fiap.techchallenge.fastfood.core.domain.Payment;
 
 import java.net.URI;
@@ -17,12 +17,16 @@ import java.net.URI;
 @RequestMapping("/payment")
 public class PaymentController {
 
+    private final PaymentServicePort paymentServicePort;
+
     @Autowired
-    private PaymentService paymentService;
+    public PaymentController(PaymentServicePort paymentServicePort) {
+        this.paymentServicePort = paymentServicePort;
+    }
 
     @PostMapping
     public ResponseEntity<Payment> register(@RequestBody Payment payment) {
-        Payment registredPayment = paymentService.registerPay(payment);
+        Payment registredPayment = paymentServicePort.registerPay(payment);
 
         /**
          * Forma adequada para retornar servços CREATED
